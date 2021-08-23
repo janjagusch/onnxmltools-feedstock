@@ -1,5 +1,5 @@
 {% set name = "onnxmltools" %}
-{% set version = "1.8.0" %}
+{% set version = "1.9.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/onnx/onnxmltools/archive/{{ version }}.tar.gz
-  sha256: 3f460b79d22a7fb1c9098ccacfe5da9da1558db4e96346bc847fde73c6cad6c0
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/onnxmltools-{{ version }}.tar.gz
+  sha256: 5daeb8961b25803cdbd67aa8c0487ed4509472716082535fda6be01a1e1a056e
 
 build:
   number: 0
@@ -21,11 +21,8 @@ requirements:
     - python >=3.6
   run:
     - python >=3.6
-    - keras2onnx
     - numpy
     - onnx
-    - onnxconverter-common >=1.8,<1.9
-    - protobuf
     - skl2onnx
 
 test:

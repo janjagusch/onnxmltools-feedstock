@@ -7,8 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/onnxmltools-{{ version }}.tar.gz
-  sha256: 5daeb8961b25803cdbd67aa8c0487ed4509472716082535fda6be01a1e1a056e
+   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/onnxmltools-{{ version }}.tar.gz
+     sha256: 5daeb8961b25803cdbd67aa8c0487ed4509472716082535fda6be01a1e1a056e
+   - url: https://raw.githubusercontent.com/onnx/onnxmltools/{{ version }}/requirements.txt
+     sha256: 2e8729f47e8d7c09fa1b7d5f7de86f24ec05e92b921192bc4ece0086b3979450
+     fn: requirements.txt
 
 build:
   number: 0

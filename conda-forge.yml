@@ -2,6 +2,9 @@ conda_forge_output_validation: true
 bot:
   run_deps_from_wheel: true
   automerge: true
+  version_updates:
+    exclude:
+      - "1.11.10"
 github:
   branch_name: main
   tooling_branch_name: main
